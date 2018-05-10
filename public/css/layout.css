@@ -1,0 +1,59 @@
+#copyright{
+    text-align: center;
+}
+.navbar-inner{
+    text-align: center;
+}
+.navbar-inner img{
+    height: 60px;
+    width: 200px;
+}
+
+.container{
+    font-family: 'Nova Mono';
+}
+
+@media screen and (max-width: 480px) {
+    div.container {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    div.container {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 601px) {
+    div.container {
+        font-size: 16px;
+    }
+}
+
+.bg-img{position:relative}
+
+.caption-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.caption-left{text-align:center;width:10%;position:absolute;top:50%;left:20%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.caption-right{text-align:center;width:10%;position:absolute;top:50%;right:20%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.caption-topmiddle{text-align: center;width:80%;position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.caption-bottommiddle{text-align: center;width:80%;position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+
+/*style the demo*/
+img{width:100%;height:82vh}
+/*bg color*/
+.black{color:#000!important;background-color:#ffffff!important}
+.red{color:#000!important;background-color:#ff4433!important}
+.green{color:#000!important;background-color:#44ff33!important}
+/*text*/
+.text-white,.text-white-hover:hover{color:#fff!important;}
+.text-black,.text-black-hover:hover{color:#000!important}
+.text-grey,.text-grey-hover:hover{color:#757575!important}
+.text-red,.text-red-hover:hover{color:#f44336!important}
+
+
+.text-right{text-align:right!important}
+/*margin and padding*/
+.margin{margin:10px!important;}
+.padding{padding:10px 10px!important}
+
