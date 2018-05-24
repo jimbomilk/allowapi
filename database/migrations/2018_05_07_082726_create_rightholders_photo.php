@@ -22,6 +22,7 @@ class CreateRightholdersPhoto extends Migration
             $table->string('rhname');
             $table->string('link');
             $table->string('sharing');
+            $table->integer('status'); // 0 - pendiente, 100 - rechazado , 200 - aceptado
             $table->timestamps();
             $table->unsignedInteger('photo_id');
             $table->foreign('photo_id')

@@ -162,6 +162,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Waavi\UrlShortener\UrlShortenerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -218,6 +219,7 @@ return [
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
 
         'UrlShortener' => Waavi\UrlShortener\Facades\UrlShortener::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 
 ];

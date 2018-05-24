@@ -42,10 +42,11 @@ $api->version('v1', function (Router $api) {
     });
 
     $api->group(['middleware' => 'jwt.auth'], function ($api) {
-        $api->post('photos/store',  'App\Api\V1\Controllers\PhotoController@store');
-        $api->get('photos',         'App\Api\V1\Controllers\PhotoController@index');
-        $api->get('photos/{id}',    'App\Api\V1\Controllers\PhotoController@show');
-        $api->put('photos/{id}',    'App\Api\V1\Controllers\PhotoController@update');
-        $api->delete('photos/{id}', 'App\Api\V1\Controllers\PhotoController@destroy');
+        $api->post('photos/store',                  'App\Api\V1\Controllers\PhotoController@store');
+        $api->get('photos/status/{status}',         'App\Api\V1\Controllers\PhotoController@index');
+        $api->get('photos/storage/{filename}',      'App\Api\V1\Controllers\PhotoController@storage');
+        $api->get('photos/{id}',                    'App\Api\V1\Controllers\PhotoController@show');
+        $api->put('photos/{id}',                    'App\Api\V1\Controllers\PhotoController@update');
+        $api->delete('photos/{id}',                 'App\Api\V1\Controllers\PhotoController@destroy');
     });
 });
