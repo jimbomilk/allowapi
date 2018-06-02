@@ -17,11 +17,11 @@ class CreateRightholdersPhoto extends Migration
             $table->increments('id');
             $table->string('owner');
             $table->string('name');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('rhphone');
             $table->string('rhname');
-            $table->string('link');
-            $table->string('sharing');
+            $table->string('rhemail');
+            $table->mediumText('link');
             $table->integer('status'); // 0 - pendiente, 100 - rechazado , 200 - aceptado
             $table->timestamps();
             $table->unsignedInteger('photo_id');

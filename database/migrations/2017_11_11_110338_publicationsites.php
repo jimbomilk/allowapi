@@ -16,7 +16,7 @@ class Publicationsites extends Migration
         Schema::create('publicationsites', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('url');
+            $table->string('url')->nullable();
 
             $table->integer('group_id')->unsigned();
             $table->foreign('group_id')

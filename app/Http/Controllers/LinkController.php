@@ -13,11 +13,8 @@ class LinkController extends Controller
     {
         $resToken = Token::generate($photoId,$owner,$name,$phone,$rhname,$rhphone);
 
-        $sh  = str_split($sharing);
-
-
         if (hash_equals($resToken,$token))
-            return view ('pages.photo',['photo'=>$photoId,'owner'=>$owner,'name'=>$name,'phone'=>$phone,'sh'=>$sh,'token'=>$token]);
+            return view ('pages.photo',['photo'=>$photoId,'owner'=>$owner,'name'=>$name,'phone'=>$phone,'sh'=>$sharing,'token'=>$token]);
         else return view('pages.error',['photo'=>$photoId,'phone'=>$phone,'token'=>$token]);
     }
 

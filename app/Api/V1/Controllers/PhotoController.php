@@ -28,7 +28,7 @@ class PhotoController extends Controller
         if (!$currentUser)
             throw new HttpException(500);
 
-
+        // seleccionamos todos los links donde coincida el teléfono del usuario
         $rhs = RightholderPhoto::where('rhphone',$currentUser->phone)->get();
 
         foreach($rhs as $rh){
@@ -94,8 +94,8 @@ class PhotoController extends Controller
     }
 
     public function setSharing($obj){
-        if (!property_exists($obj,'sharing'))
-            return "0000";
+
+
         $sh = ($obj->sharing->facebook=="")?"0":"1";
         $sh .= ($obj->sharing->twitter=="")?"0":"1";
         $sh .= ($obj->sharing->instagram=="")?"0":"1";
